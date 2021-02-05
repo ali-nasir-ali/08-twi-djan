@@ -27,7 +27,7 @@ PAGINATION_COUNT = 3
 
 class PostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = 'blog/home.html'
+    template_name = 'blog/home.html' # <app> / <model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = PAGINATION_COUNT
